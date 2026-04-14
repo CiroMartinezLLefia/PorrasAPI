@@ -1,17 +1,16 @@
 import express from "express"
-import dotenv from "dotenv"
-
 import routerPorras from "./rutas/ruta.js"
+import dotenv from "dotenv"
 import cors from "cors"
 
 const app = express()   
 app.use(cors())
-
 dotenv.config()
 
 app.use("/api/porras", routerPorras)
 
 app.get("/", (req, res) => {
+    res.send(process.env.EJEMPLO)
     console.log("PETITION")
 })
 
