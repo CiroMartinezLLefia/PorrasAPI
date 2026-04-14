@@ -9,11 +9,12 @@ app.use(cors())
 
 dotenv.config()
 
+app.get("/api/porras", routerPorras)
+
 app.get("/", (req, res) => {
     console.log("PETITION")
 })
 
-app.get("/api/porras", routerPorras)
 
 app.listen(3000, () => {
     console.log("TESTING RUNNNING")
