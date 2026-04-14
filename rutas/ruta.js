@@ -3,6 +3,6 @@ import { getPorras } from "../controladores/controladores.js";
 
 const routerPorras = express.Router()
 
-routerPorras.get("/api/porras", getPorras)
+routerPorras.get("/", getPorras)
 
 export default routerPorras
