@@ -5,9 +5,9 @@ import dotenv from "dotenv"
 import routerPorras from "./rutas/ruta.js"
 
 const app = express()   
+app.use(cors())
 
 dotenv.config()
-app.use(cors())
 
 app.get("/", (req, res) => {
     console.log("PETITION")
