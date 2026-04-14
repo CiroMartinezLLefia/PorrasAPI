@@ -9,7 +9,7 @@ app.use(cors())
 
 dotenv.config()
 
-app.get("/api/porras", routerPorras)
+app.use("/api/porras", routerPorras)
 
 app.get("/", (req, res) => {
     console.log("PETITION")
